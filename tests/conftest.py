@@ -4,7 +4,6 @@
 import pytest
 from app import create_app
 
-
 @pytest.fixture()
 def application():
     """This makes the app"""
@@ -12,8 +11,8 @@ def application():
     application.config.update({
         "TESTING": True,
     })
-    yield application
 
+    yield application
 
 @pytest.fixture()
 def client(application):
